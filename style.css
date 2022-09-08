@@ -1,0 +1,9 @@
+*{box-sizing: border-box;padding: 0;margin: 0;}
+.miejsce {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32, 35, 34);
+}
