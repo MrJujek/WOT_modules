@@ -10,6 +10,7 @@
 }
 .miejsce:hover {
     background-color: rgb(72, 75, 74);
+    cursor: pointer;
 }
 .flex {
     display: flex;
