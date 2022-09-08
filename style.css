@@ -7,3 +7,9 @@
     justify-content: center;
     background-color: rgb(32, 35, 34);
 }
+.flex {
+    display: flex;
+}
+.row {
+    flex-direction: row;
+}
