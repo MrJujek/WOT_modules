@@ -7,6 +7,9 @@
     justify-content: center;
     background-color: rgb(32, 35, 34);
 }
+.miejsce:hover {
+    background-color: rgb(72, 75, 74);
+}
 .flex {
     display: flex;
 }
