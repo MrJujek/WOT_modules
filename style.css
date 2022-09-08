@@ -13,3 +13,7 @@
 .row {
     flex-direction: row;
 }
+.equipment {
+    width: 290px;
+    height: 185px;
+}
