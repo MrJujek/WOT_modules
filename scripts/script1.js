@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#miejsce").click(function () {
+    $("svg").click(function () {
         $(this).hide();
     });
 })
