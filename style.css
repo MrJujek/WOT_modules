@@ -1,5 +1,10 @@
-*{box-sizing: border-box;padding: 0;margin: 0;}
-.miejsce {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#miejsce {
     width: 54px;
     height: 54px;
     display: flex;
@@ -8,16 +13,20 @@
     background-color: rgb(32, 35, 34);
     margin: 5px;
 }
-.miejsce:hover {
+
+#miejsce:hover {
     background-color: rgb(72, 75, 74);
     cursor: pointer;
 }
+
 .flex {
     display: flex;
 }
+
 .row {
     flex-direction: row;
 }
+
 .equipment {
     width: 290px;
     height: 185px;
