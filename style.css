@@ -27,7 +27,7 @@
     flex-direction: row;
 }
 
-.equipment {
+#equipment {
     width: 290px;
     height: 185px;
 }
