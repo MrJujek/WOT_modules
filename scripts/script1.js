@@ -6,17 +6,22 @@ $(document).ready(function () {
         .css("background", "black")
         .hide()
 
-    $("#slot1").click(function () {
+    $("#equipment_slot1").click(function () {
         $("#slots_for_equipment")
             .hide()
         $("#equipment").show();
     });
-    $("#slot2").click(function () {
+    $("#equipment_slot2").click(function () {
         $("#slots_for_equipment")
             .hide()
         $("#equipment").show();
     });
-    $("#slot3").click(function () {
+    $("#equipment_slot3").click(function () {
+        $("#slots_for_equipment")
+            .hide()
+        $("#equipment").show();
+    });
+    $("#directive_slot").click(function () {
         $("#slots_for_equipment")
             .hide()
         $("#equipment").show();
