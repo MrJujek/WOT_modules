@@ -1,3 +1,6 @@
+import { getapi } from "./mjs.mjs"
+console.log(getapi('https://api.worldoftanks.eu/wot/encyclopedia/provisions/?application_id=98e129430b80fda39a161c7a200261cf'))
+
 $(document).ready(function () {
     $("#slots_for_equipment")
         .show()
@@ -33,3 +36,7 @@ $(document).ready(function () {
         $("#equipment").hide();
     });
 })
+
+
+// 'https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=98e129430b80fda39a161c7a200261cf'
+// 'https://api.worldoftanks.eu/wot/encyclopedia/provisions/?application_id=98e129430b80fda39a161c7a200261cf'

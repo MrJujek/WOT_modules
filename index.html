@@ -5,26 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Equipment Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./libraries/jq.js"></script>
-    <script src="./scripts/script1.js"></script>
-    <script>
-        const all_tanks = 'https://api.worldoftanks.ru/wot/encyclopedia/vehicles/?application_id=98e129430b80fda39a161c7a200261cf'
-        const all_equipment = 'https://api.worldoftanks.eu/wot/encyclopedia/provisions/?application_id=98e129430b80fda39a161c7a200261cf'
-
-        async function getapi(url) {
-            const response = await fetch(url);
-
-            var data = await response.json();
-            console.log(data);
-            return data
-        }
-        console.log(getapi(all_equipment))
-
-        // let wynik = getapi(all_equipment)
-        // console.log(wynik)
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="module" src="./scripts/script1.js"></script>
 </head>
 
 <body>
@@ -40,6 +24,12 @@
                 <line x1="50" y1="20" x2="50" y2="80" />
             </svg></div>
         <div id="equipment_slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                <line x1="20" y1="50" x2="80" y2="50" />
+                <line x1="50" y1="20" x2="50" y2="80" />
+            </svg></div>
+
+        <div id="directive_slot"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
                 stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
                 <line x1="20" y1="50" x2="80" y2="50" />
                 <line x1="50" y1="20" x2="50" y2="80" />
