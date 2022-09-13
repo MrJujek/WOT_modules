@@ -1,6 +1,5 @@
-export async function getapi(url) {
-    const response = await fetch(url);
+export function getapi(url) {
+    const response = fetch(url).then(result => { return result.json() });
 
-    var data = await response.json();
-    return data
+    return response
 }
