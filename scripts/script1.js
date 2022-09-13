@@ -3,8 +3,8 @@ import { getapi } from "./mjs.mjs"
 const all_tanks = 'https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=98e129430b80fda39a161c7a200261cf&limit=10'
 const all_equipment = 'https://api.worldoftanks.eu/wot/encyclopedia/provisions/?application_id=98e129430b80fda39a161c7a200261cf'
 
-let tak = await getapi(all_tanks)
-tak = tak['data']
+let tak = (await getapi(all_tanks))["data"]
+//tak = tak['data']
 
 console.log(tak)
 
