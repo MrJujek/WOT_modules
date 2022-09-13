@@ -9,21 +9,41 @@
     <link rel="stylesheet" href="style.css">
     <script src="/libraries/jq.js"></script>
     <script src="/scripts/script1.js"></script>
+    <script>
+
+        var request = new XMLHttpRequest()
+
+        request.open('GET', 'https://api.worldoftanks.eu/wot/encyclopedia/tanks/?application_id=98e129430b80fda39a161c7a200261cf', true)
+        request.onload = function () {
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response)
+
+            if (request.status >= 200 && request.status < 400) {
+                data.forEach(movie => {
+                    console.log(movie.title)
+                })
+            } else {
+                console.log('error')
+            }
+        }
+
+        request.send()
+    </script>
 </head>
 
 <body>
-    <div class="flex row">
-        <div id="miejsce"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744' stroke='#605744'
+    <div id="slots_for_equipment">
+        <div id="slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744' stroke='#605744'
                 stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
                 <line x1="20" y1="50" x2="80" y2="50" />
                 <line x1="50" y1="20" x2="50" y2="80" />
             </svg></div>
-        <div id="miejsce"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744' stroke='#605744'
+        <div id="slot2"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744' stroke='#605744'
                 stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
                 <line x1="20" y1="50" x2="80" y2="50" />
                 <line x1="50" y1="20" x2="50" y2="80" />
             </svg></div>
-        <div id="miejsce"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744' stroke='#605744'
+        <div id="slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744' stroke='#605744'
                 stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
                 <line x1="20" y1="50" x2="80" y2="50" />
                 <line x1="50" y1="20" x2="50" y2="80" />

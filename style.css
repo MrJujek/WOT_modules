@@ -4,7 +4,9 @@
     margin: 0;
 }
 
-#miejsce {
+#slot1,
+#slot2,
+#slot3 {
     width: 54px;
     height: 54px;
     display: flex;
@@ -14,16 +16,15 @@
     margin: 5px;
 }
 
-#miejsce:hover {
+#slot1:hover,
+#slot2:hover,
+#slot3:hover {
     background-color: rgb(72, 75, 74);
     cursor: pointer;
 }
 
-.flex {
+#slots_for_equipment {
     display: flex;
-}
-
-.row {
     flex-direction: row;
 }
 
