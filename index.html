@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script type="module" src="./scripts/script1.js"></script>
+    <script type="module" src="./scripts/chart1.js"></script>
 </head>
 
 <body>
@@ -38,7 +40,9 @@
                 <line x1="50" y1="20" x2="50" y2="80" />
             </svg></div>
     </div>
-    <div id="equipment"></div>
+    <div id="equipment">
+        <canvas id="myChart" width="290px" height="185px"></canvas>
+    </div>
 </body>
 
 </html>
