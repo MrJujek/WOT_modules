@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#directive_slot,
+#equipment_slot1,
+#equipment_slot2,
+#equipment_slot3 {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32, 35, 34);
+}
+
+#directive_slot:hover,
+#equipment_slot1:hover,
+#equipment_slot2:hover,
+#equipment_slot3:hover {
+    background-color: rgb(72, 75, 74);
+    cursor: pointer;
+}
+
+#slots_for_equipment {
+    display: flex;
+    flex-direction: row;
+}
+
+#equipment {
+    width: 290px;
+    height: 185px;
+}
+
+#directive_slot {
+    margin-left: 5px;
+}

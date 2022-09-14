@@ -13,7 +13,7 @@ $(document).ready(function () {
         .show()
 
     $("#equipment")
-        .css("background", "black")
+        .css("background", "lightgray")
         .hide()
 
     $("#equipment_slot1").click(function () {
