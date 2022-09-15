@@ -24,7 +24,7 @@ export function drawChart(wn8_x, data_y, chart_name) {
                 fill: true,    //false,
                 tension: 0.2,
                 segment: {
-                    borderColor: ctx => unicum(ctx, 'fiolet')
+                    borderColor: ctx => unicum(ctx, 'blueviolet')
                         || great(ctx, 'blue')
                         || good(ctx, 'green')
                         || average(ctx, 'yellow')
