@@ -48,8 +48,7 @@ $(document).ready(function () {
 let wn8 = [1299, 1900, 2300, 500, 1165, 3100]
 let data = [86, 114, 106, 106, 107, 111, 133, 221]
 
-document.write(drawChart(wn8, data))
-
+drawChart(wn8, data)
 
 let tak = (await getapi(all_tanks))["data"]
 console.log(tak)
