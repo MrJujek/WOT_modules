@@ -4,10 +4,19 @@
     margin: 0;
 }
 
-#directive_slot,
+#equipment_and_consumables {
+    display: flex;
+    flex-direction: row;
+}
+
 #equipment_slot1,
 #equipment_slot2,
-#equipment_slot3 {
+#equipment_slot3,
+#directive_slot,
+#consumable_slot1,
+#consumable_slot2,
+#consumable_slot3,
+#camouflage_slot {
     width: 54px;
     height: 54px;
     display: flex;
@@ -16,17 +25,35 @@
     background-color: rgb(32, 35, 34);
 }
 
-#directive_slot:hover,
 #equipment_slot1:hover,
 #equipment_slot2:hover,
-#equipment_slot3:hover {
+#equipment_slot3:hover,
+#directive_slot:hover,
+#consumable_slot1:hover,
+#consumable_slot2:hover,
+#consumable_slot3:hover {
     background-color: rgb(72, 75, 74);
     cursor: pointer;
 }
 
-#slots_for_equipment {
+#equipment_slot2,
+#consumable_slot2 {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#slots_for_equipment,
+#slots_for_consumable {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 164px;
+    height: 54px;
+}
+
+#slots_for_ammunition {
+    width: 129px;
+    height: 54px;
 }
 
 #equipment {
@@ -34,6 +61,8 @@
     height: 185px;
 }
 
+#camouflage_slot,
 #directive_slot {
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

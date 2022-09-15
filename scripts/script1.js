@@ -53,5 +53,5 @@ $(document).ready(function () {
 
 
 
-let tak = (await getapi(all_tanks))["data"]
+let tak = (await getapi(all_equipment))["data"]
 console.log(tak)

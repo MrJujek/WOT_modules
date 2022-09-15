@@ -14,15 +14,25 @@ export function drawChart(wn8_x, data_y, chart_name) {
     const very_bad = (ctx, value) => ctx.p0.parsed.y >= 0 ? value :
         undefined;
 
-    return new Chart(document.getElementById(chart_name), {
+    const wykres = new Chart(document.getElementById(chart_name), {
         type: 'line',
         data: {
             labels: data_y,
             datasets: [{
                 data: wn8_x,
                 label: "WN8",
+                //borderColor: 'blue',
+                // {
+                //     borderColor: ctx => unicum(ctx, 'blueviolet')
+                //         || great(ctx, 'blue')
+                //         || good(ctx, 'green')
+                //         || average(ctx, 'yellow')
+                //         || below_average(ctx, 'orange')
+                //         || bad(ctx, 'red')
+                //         || very_bad(ctx, 'black')
+                // },
                 fill: true,    //false,
-                tension: 0.2,
+                tension: 0.3,
                 segment: {
                     borderColor: ctx => unicum(ctx, 'blueviolet')
                         || great(ctx, 'blue')
@@ -39,6 +49,13 @@ export function drawChart(wn8_x, data_y, chart_name) {
                 display: true,
                 text: 'WN8'
             }
-        }
+        },
     });
+
+    wykres.getDatasetMeta(0).data[4].custom = {
+        backgroundColor: 'red'
+    };
+    wykres.update();
+
+    return wykres;
 }
