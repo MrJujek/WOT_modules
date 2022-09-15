@@ -21,7 +21,7 @@ export function drawChart(wn8_x, data_y, chart_name) {
             datasets: [{
                 data: wn8_x,
                 label: "WN8",
-                fill: false,    //true,
+                fill: true,    //false,
                 tension: 0.2,
                 segment: {
                     borderColor: ctx => unicum(ctx, 'fiolet')
