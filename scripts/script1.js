@@ -45,10 +45,11 @@ $(document).ready(function () {
     });
 })
 
-let wn8 = [1299, 1900, 2300, 500, 1165, 3100]
+let wn8 = [1299, 1900, 2300, 1870, 500, 1165, 2400, 3100]
 let data = [86, 114, 106, 106, 107, 111, 133, 221]
+let chart = "myChart"
 
-drawChart(wn8, data)
+drawChart(wn8, data, chart)
 
 let tak = (await getapi(all_tanks))["data"]
 console.log(tak)
