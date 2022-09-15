@@ -1,10 +1,10 @@
-function drawChart(wn8_x, data_y) {
+export function drawChart(wn8_x, data_y) {
     const fiolet = (ctx, value) => ctx.p0.parsed.y > 3000 ? value :
         undefined;
     const blue = (ctx, value) => ctx.p0.parsed.y > 1500 ? value :
         undefined;
 
-    new Chart(document.getElementById("myChart"), {
+    return new Chart(document.getElementById("myChart"), {
         type: 'line',
         data: {
             labels: data_y,
