@@ -11,7 +11,7 @@ export function drawChart(wn8_x, data_y, chart_name) {
         undefined;
     const bad = (ctx, value) => ctx.p0.parsed.y > 200 ? value :
         undefined;
-    const very_bad = (ctx, value) => ctx.p0.parsed.y > 0 ? value :
+    const very_bad = (ctx, value) => ctx.p0.parsed.y >= 0 ? value :
         undefined;
 
     return new Chart(document.getElementById(chart_name), {
@@ -21,8 +21,7 @@ export function drawChart(wn8_x, data_y, chart_name) {
             datasets: [{
                 data: wn8_x,
                 label: "WN8",
-                //borderColor: blue,
-                fill: false,
+                fill: false,    //true,
                 tension: 0.2,
                 segment: {
                     borderColor: ctx => unicum(ctx, 'fiolet')

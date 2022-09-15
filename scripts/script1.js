@@ -14,7 +14,7 @@ $(document).ready(function () {
         .show()
 
     $("#equipment")
-        .css("background", "lightgray")
+        .css("background", "white")
         .hide()
 
     $("#equipment_slot1").click(function () {
@@ -45,8 +45,8 @@ $(document).ready(function () {
     });
 })
 
-let wn8 = [1299, 1900, 2300, 1870, 500, 1165, 2400, 3100]
-let data = [86, 114, 106, 106, 107, 111, 133, 221]
+let wn8 = [0, 101, 201, 401, 501, 700, 1001, 1300, 1601, 1900, 2200, 2501, 3000, 3501]
+let data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140]
 let chart = "myChart"
 
 drawChart(wn8, data, chart)
