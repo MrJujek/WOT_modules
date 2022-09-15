@@ -1,27 +1,29 @@
-const fiolet = (ctx, value) => ctx.p0.parsed.y > 3000 ? value :
-    undefined;
-const blue = (ctx, value) => ctx.p0.parsed.y > 1500 ? value :
-    undefined;
+function drawChart(wn8_x, data_y) {
+    const fiolet = (ctx, value) => ctx.p0.parsed.y > 3000 ? value :
+        undefined;
+    const blue = (ctx, value) => ctx.p0.parsed.y > 1500 ? value :
+        undefined;
 
-new Chart(document.getElementById("myChart"), {
-    type: 'line',
-    data: {
-        labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950],
-        datasets: [{
-            data: [86, 114, 106, 106, 107, 111, 133, 221],
-            label: "Africa",
-            borderColor: "#3e95cd",
-            fill: false,
-            tension: 0.3
-        }]
-    },
-    options: {
-        title: {
-            display: true,
-            text: 'World population per region (in millions)'
+    new Chart(document.getElementById("myChart"), {
+        type: 'line',
+        data: {
+            labels: data_y,
+            datasets: [{
+                data: wn8_x,
+                label: "WN8",
+                borderColor: "#3e95cd",
+                fill: false,
+                tension: 0.2
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'WN8'
+            }
         }
-    }
-});
+    });
+}
 // const ctx = document.getElementById('myChart');
 // const myChart = new Chart(ctx, {
 //     type: 'line',
