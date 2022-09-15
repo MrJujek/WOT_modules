@@ -1,7 +1,17 @@
 export function drawChart(wn8_x, data_y, chart_name) {
-    const fiolet = (ctx, value) => ctx.p0.parsed.y > 3000 ? value :
+    const unicum = (ctx, value) => ctx.p0.parsed.y > 3500 ? value :
         undefined;
-    const blue = (ctx, value) => ctx.p0.parsed.y > 1500 ? value :
+    const great = (ctx, value) => ctx.p0.parsed.y > 2500 ? value :
+        undefined;
+    const good = (ctx, value) => ctx.p0.parsed.y > 1600 ? value :
+        undefined;
+    const average = (ctx, value) => ctx.p0.parsed.y > 1000 ? value :
+        undefined;
+    const below_average = (ctx, value) => ctx.p0.parsed.y > 500 ? value :
+        undefined;
+    const bad = (ctx, value) => ctx.p0.parsed.y > 200 ? value :
+        undefined;
+    const very_bad = (ctx, value) => ctx.p0.parsed.y > 0 ? value :
         undefined;
 
     return new Chart(document.getElementById(chart_name), {
@@ -11,13 +21,18 @@ export function drawChart(wn8_x, data_y, chart_name) {
             datasets: [{
                 data: wn8_x,
                 label: "WN8",
-                borderColor: blue,
+                //borderColor: blue,
                 fill: false,
                 tension: 0.2,
-                // segment: {
-                //     borderColor: ctx => fiolet(ctx, 'rgba(255, 206, 86, 1)')
-                //         || green(ctx, 'rgba(255, 159, 64, 1)')
-                // }
+                segment: {
+                    borderColor: ctx => unicum(ctx, 'fiolet')
+                        || great(ctx, 'blue')
+                        || good(ctx, 'green')
+                        || average(ctx, 'yellow')
+                        || below_average(ctx, 'orange')
+                        || bad(ctx, 'red')
+                        || very_bad(ctx, 'black')
+                }
             }]
         },
         options: {
