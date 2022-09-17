@@ -46,9 +46,20 @@
 }
 
 #slots_for_ammunition {
-    width: 129px;
+    width: 128px;
     height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+#amunition_slot1,
+#amunition_slot2,
+#amunition_slot3 {
+    height: 54px;
+    background-color: rgb(32, 35, 34);
+}
+
 
 #equipment {
     width: 290px;

@@ -17,7 +17,7 @@
 
 <body>
     <div id="equipment_and_consumables">
-        <!-- Panel with modules and directive -->
+        <!-- Modules -->
         <div id="slots_for_equipment">
             <!-- Equipment slots -->
             <div id="equipment_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
@@ -37,17 +37,21 @@
                 </svg></div>
         </div>
 
-        <!-- Directive slot -->
+        <!-- Directive -->
         <div id="directive_slot"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-            stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-            <line x1="20" y1="50" x2="80" y2="50" />
-            <line x1="50" y1="20" x2="50" y2="80" />
-        </svg></div>
+                stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                <line x1="20" y1="50" x2="80" y2="50" />
+                <line x1="50" y1="20" x2="50" y2="80" />
+            </svg></div>
 
-        <!-- Panel with ammunition -->
-        <div id="slots_for_ammunition"></div>
+        <!-- Ammunition -->
+        <div id="slots_for_ammunition">
+            <div id="ammunition_slot1"></div>
+            <div id="ammunition_slot2"></div>
+            <div id="ammunition_slot3"></div>
+        </div>
 
-        <!-- Panel with consumable -->
+        <!-- Consumables -->
         <div id="slots_for_consumable">
             <!-- Consumable slots -->
             <div id="consumable_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
@@ -67,13 +71,15 @@
                 </svg></div>
         </div>
 
-        <!-- Camouflage slot -->
-        <div class="camouflage_slot"></div>
+        <!-- Camouflage -->
+        <div class="camouflage_slot">
+            
+        </div>
     </div>
 
 
     <div id="equipment">
-        <canvas id="myChart" width="290px" height="185px"></canvas>
+        <canvas id="WN8_chart" width="290px" height="185px"></canvas>
     </div>
 </body>
 
