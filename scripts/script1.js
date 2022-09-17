@@ -20,12 +20,16 @@ $(document).ready(function () {
     $("#main_site").show()
 
     $("#header_text").click(function () {
-        $("#main_site").show()
+        console.log("klik")
+    })
 
-        $("#player_site").hide()
-        $("#tanks_site").hide()
-        $("#about_site").hide()
-    });
+    // $("#header_text").click(function () {
+    //     $("#main_site").show()
+
+    //     $("#player_site").hide()
+    //     $("#tanks_site").hide()
+    //     $("#about_site").hide()
+    // });
 
     $("#player_stats").click(function () {
         $("#main_site").hide()
@@ -34,50 +38,52 @@ $(document).ready(function () {
 
 
     });
+    $("#header_text").click(function () {
+        console.log("klik")
+    })
+    // $("#tanks_stats").click(function () {
+    //     $("#main_site").hide()
 
-    $("#tanks_stats").click(function () {
-        $("#main_site").hide()
+    //     $("#tanks_site").show()
 
-        $("#tanks_site").show()
+    //     $("#slots_for_equipment")
+    //         .show()
 
-        $("#slots_for_equipment")
-            .show()
+    //     $("#equipment")
+    //         .css("background", "white")
+    //         .hide()
 
-        $("#equipment")
-            .css("background", "white")
-            .hide()
+    //     $("#equipment_slot1").click(function () {
+    //         $("#slots_for_equipment")
+    //             .hide()
+    //         $("#equipment").show();
+    //         drawWN8Chart(wn8, data, chart)
+    //     });
+    //     $("#equipment_slot2").click(function () {
+    //         $("#slots_for_equipment")
+    //             .hide()
+    //         $("#equipment").show();
+    //         drawWN8Chart(wn8, data, chart)
+    //     });
+    //     $("#equipment_slot3").click(function () {
+    //         $("#slots_for_equipment")
+    //             .hide()
+    //         $("#equipment").show();
+    //         drawWN8Chart(wn8, data, chart)
+    //     });
+    //     $("#directive_slot").click(function () {
+    //         $("#slots_for_equipment")
+    //             .hide()
+    //         $("#equipment").show();
+    //         drawWN8Chart(wn8, data, chart)
+    //     });
 
-        $("#equipment_slot1").click(function () {
-            $("#slots_for_equipment")
-                .hide()
-            $("#equipment").show();
-            drawWN8Chart(wn8, data, chart)
-        });
-        $("#equipment_slot2").click(function () {
-            $("#slots_for_equipment")
-                .hide()
-            $("#equipment").show();
-            drawWN8Chart(wn8, data, chart)
-        });
-        $("#equipment_slot3").click(function () {
-            $("#slots_for_equipment")
-                .hide()
-            $("#equipment").show();
-            drawWN8Chart(wn8, data, chart)
-        });
-        $("#directive_slot").click(function () {
-            $("#slots_for_equipment")
-                .hide()
-            $("#equipment").show();
-            drawWN8Chart(wn8, data, chart)
-        });
-
-        $("#equipment").click(function () {
-            $("#slots_for_equipment")
-                .show()
-            $("#equipment").hide();
-        });
-    });
+    //     $("#equipment").click(function () {
+    //         $("#slots_for_equipment")
+    //             .show()
+    //         $("#equipment").hide();
+    //     });
+    // });
 
 
 })

@@ -14,7 +14,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px -5px 20px #040403;
+  box-shadow: 5px 5px 20px #040403;
 }
 
 footer {
@@ -29,8 +29,13 @@ footer {
   bottom: 0px;
 }
 
+#logo {
+  padding-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
 #header_text {
-  padding-left: 20px;
   color: #F9F4F8;
   font-size: 45px;
   font-family: Bungee, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -90,12 +95,6 @@ nav {
   font-weight: 800;
   font-family: Bungee;
   text-shadow: 5px 5px 3px #040403;
-}
-
-#player_stats span,
-#tanks_stats span,
-#about span {
-  font-size: 40px;
 }
 
 #player_stats:hover,
