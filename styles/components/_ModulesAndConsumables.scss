@@ -11,8 +11,8 @@
 #consumable_slot2,
 #consumable_slot3,
 #camouflage_slot {
-    width: 54px;
-    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,4 +1,4 @@
-export function drawWN8Chart(wn8_x, data_y, chart_name) {
+export function drawWN8Chart(wn8, data, chart_name) {
     const unicum = (ctx, value) => ((ctx.p0.parsed.y >= 3500) && (ctx.p1.parsed.y >= 3500)) ? value :
         undefined;
     const great = (ctx, value) => ((ctx.p0.parsed.y >= 2500) && (ctx.p1.parsed.y >= 2500)) ? value :
@@ -17,9 +17,9 @@ export function drawWN8Chart(wn8_x, data_y, chart_name) {
     const wykres = new Chart(document.getElementById(chart_name), {
         type: 'line',
         data: {
-            labels: data_y,
+            labels: data,
             datasets: [{
-                data: wn8_x,
+                data: wn8,
                 label: "WN8",
                 //borderColor: 'blue',
                 // {
@@ -52,9 +52,8 @@ export function drawWN8Chart(wn8_x, data_y, chart_name) {
         },
     });
 
-    wykres.getDatasetMeta(0).data[4].custom = {
-        backgroundColor: 'red'
-    };
+    wykres.getDatasetMeta(0).data[5].custom = { pointBorderColor: 'red' };
+    wykres.getDatasetMeta(0).data[5].custom = { pointBackgroundColor: 'red' };
     wykres.update();
 
     return wykres;

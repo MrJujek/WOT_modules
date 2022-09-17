@@ -11,8 +11,8 @@
 #consumable_slot2,
 #consumable_slot3,
 #camouflage_slot {
-  width: 54px;
-  height: 54px;
+  min-width: 54px;
+  min-height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,14 +51,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 10px;
 }
 
-#ammunition_slot1,
-#ammunition_slot2,
-#ammunition_slot3 {
+#amunition_slot1,
+#amunition_slot2,
+#amunition_slot3 {
   height: 54px;
-  width: calc(128px/3);
   background-color: rgb(32, 35, 34);
 }
 
@@ -77,6 +75,4 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-/*# sourceMappingURL=scss.css.map */
+}/*# sourceMappingURL=scss.css.map */

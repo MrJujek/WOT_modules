@@ -6,81 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/icon.ico">
-    <title>WotCalc</title>
+    <title>WoTCalc</title>
 
     <link rel="stylesheet" href="./styles/scss.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script type="module" src="./scripts/script1.js"></script>
-    <script type="module" src="./scripts/chart1.js"></script>
 </head>
 
 <body>
-    <div id="equipment_and_consumables">
-        <!-- Modules -->
-        <div id="slots_for_equipment">
-            <!-- Equipment slots -->
-            <div id="equipment_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+    <!-- Main site -->
+    <div id="main_site">
+        <header>
+            <div id="logo">
+                <img src="" alt="WotCalc">
+            </div>
+            <div id="header_text">
+                <span>W</span>O<span>T</span> <span>C</span>alc
+            </div>
+        </header>
+
+        <nav>
+            <div id="player_stats">
+                <span>P</span>layer <span>s</span>tatistics
+            </div>
+            <div id="nav-line"></div>
+            <div id="tanks_stats">
+                <span>T</span>anks <span>s</span>tatistics
+            </div>
+            <div id="nav-line"></div>
+            <div id="about">
+                <span>A</span>bout
+            </div>
+        </nav>
+
+        <footer>
+            <div id="footer_text">
+                <p>WOTCalc is a website created for <a href="http://www.worldoftanks.com">World of Tanks</a>.</p>
+                <p>It is not an official Wargaming or World of Tanks website.</p>
+                <p>World of Tanks is a trademark of <a href="http://www.wargaming.net">Wargaming.net</a></p>
+            </div>
+
+        </footer>
+    </div>
+
+    <!-- Tanks site -->
+    <div id="tanks_site">
+        <header>
+            <div id="logo">
+                <img src="" alt="WotCalc">
+            </div>
+            <div id="header_text">
+                <span>W</span>O<span>T</span> <span>C</span>alc
+            </div>
+        </header>
+
+        <div id="equipment_and_consumables">
+            <!-- Modules -->
+            <div id="slots_for_equipment">
+                <!-- Equipment slots -->
+                <div id="equipment_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                        <line x1="20" y1="50" x2="80" y2="50" />
+                        <line x1="50" y1="20" x2="50" y2="80" />
+                    </svg></div>
+                <div id="equipment_slot2"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                        <line x1="20" y1="50" x2="80" y2="50" />
+                        <line x1="50" y1="20" x2="50" y2="80" />
+                    </svg></div>
+                <div id="equipment_slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                        <line x1="20" y1="50" x2="80" y2="50" />
+                        <line x1="50" y1="20" x2="50" y2="80" />
+                    </svg></div>
+            </div>
+
+            <!-- Directive -->
+            <div id="directive_slot"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
                     stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
                     <line x1="20" y1="50" x2="80" y2="50" />
                     <line x1="50" y1="20" x2="50" y2="80" />
                 </svg></div>
-            <div id="equipment_slot2"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                    stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                    <line x1="20" y1="50" x2="80" y2="50" />
-                    <line x1="50" y1="20" x2="50" y2="80" />
-                </svg></div>
-            <div id="equipment_slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                    stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                    <line x1="20" y1="50" x2="80" y2="50" />
-                    <line x1="50" y1="20" x2="50" y2="80" />
-                </svg></div>
+
+            <!-- Ammunition -->
+            <div id="slots_for_ammunition">
+                <div id="ammunition_slot1"></div>
+                <div id="ammunition_slot2"></div>
+                <div id="ammunition_slot3"></div>
+            </div>
+
+            <!-- Consumables -->
+            <div id="slots_for_consumable">
+                <!-- Consumable slots -->
+                <div id="consumable_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                        <line x1="20" y1="50" x2="80" y2="50" />
+                        <line x1="50" y1="20" x2="50" y2="80" />
+                    </svg></div>
+                <div id="consumable_slot2"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                        <line x1="20" y1="50" x2="80" y2="50" />
+                        <line x1="50" y1="20" x2="50" y2="80" />
+                    </svg></div>
+                <div id="consumable_slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
+                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
+                        <line x1="20" y1="50" x2="80" y2="50" />
+                        <line x1="50" y1="20" x2="50" y2="80" />
+                    </svg></div>
+            </div>
+
+            <!-- Camouflage -->
+            <div class="camouflage_slot">
+
+            </div>
         </div>
 
-        <!-- Directive -->
-        <div id="directive_slot"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                <line x1="20" y1="50" x2="80" y2="50" />
-                <line x1="50" y1="20" x2="50" y2="80" />
-            </svg></div>
 
-        <!-- Ammunition -->
-        <div id="slots_for_ammunition">
-            <div id="ammunition_slot1"></div>
-            <div id="ammunition_slot2"></div>
-            <div id="ammunition_slot3"></div>
-        </div>
-
-        <!-- Consumables -->
-        <div id="slots_for_consumable">
-            <!-- Consumable slots -->
-            <div id="consumable_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                    stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                    <line x1="20" y1="50" x2="80" y2="50" />
-                    <line x1="50" y1="20" x2="50" y2="80" />
-                </svg></div>
-            <div id="consumable_slot2"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                    stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                    <line x1="20" y1="50" x2="80" y2="50" />
-                    <line x1="50" y1="20" x2="50" y2="80" />
-                </svg></div>
-            <div id="consumable_slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                    stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                    <line x1="20" y1="50" x2="80" y2="50" />
-                    <line x1="50" y1="20" x2="50" y2="80" />
-                </svg></div>
-        </div>
-
-        <!-- Camouflage -->
-        <div class="camouflage_slot">
-            
+        <div id="equipment">
+            <canvas id="WN8_chart" width="290px" height="185px"></canvas>
         </div>
     </div>
 
 
-    <div id="equipment">
-        <canvas id="WN8_chart" width="290px" height="185px"></canvas>
-    </div>
+
 </body>
 
 </html>
