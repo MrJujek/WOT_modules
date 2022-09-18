@@ -11,7 +11,7 @@ export function drawWN8Chart(wn8, data, chart_name) {
         undefined;
     const bad = (ctx, value) => ((ctx.p0.parsed.y >= 200) && (ctx.p1.parsed.y >= 200)) ? value :
         undefined;
-    const very_bad = (ctx, value) => ((ctx.p0.parsed.y >= 0)) ? value :
+    const very_bad = (ctx, value) => ((ctx.p0.parsed.y >= 0) && (ctx.p1.parsed.y >= 0)) ? value :
         undefined;
 
     const wykres = new Chart(document.getElementById(chart_name), {
@@ -51,10 +51,6 @@ export function drawWN8Chart(wn8, data, chart_name) {
             }
         },
     });
-
-    wykres.getDatasetMeta(0).data[5].custom = { pointBorderColor: 'red' };
-    wykres.getDatasetMeta(0).data[5].custom = { pointBackgroundColor: 'red' };
-    wykres.update();
 
     return wykres;
 }

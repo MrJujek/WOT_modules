@@ -1,3 +1,5 @@
+@import "./variables";
+
 #equipment_and_consumables {
     display: flex;
     flex-direction: row;
@@ -46,18 +48,21 @@
 }
 
 #slots_for_ammunition {
-    width: 128px;
+    min-width: 128px;
     height: 54px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: rgb(32, 35, 34);
+    margin-right: 10px;
 }
 
-#amunition_slot1,
-#amunition_slot2,
-#amunition_slot3 {
+#ammunition_slot1,
+#ammunition_slot2,
+#ammunition_slot3 {
     height: 54px;
-    background-color: rgb(32, 35, 34);
+    width: 20px;
+    background-color: rgb(72, 75, 74);
 }
 
 
