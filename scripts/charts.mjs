@@ -14,16 +14,6 @@ export function drawWN8Chart(wn8, data, chart_name) {
             datasets: [{
                 data: wn8,
                 label: "WN8",
-                //borderColor: 'blue',
-                // {
-                //     borderColor: ctx => unicum(ctx, 'blueviolet')
-                //         || great(ctx, 'blue')
-                //         || good(ctx, 'green')
-                //         || average(ctx, 'yellow')
-                //         || below_average(ctx, 'orange')
-                //         || bad(ctx, 'red')
-                //         || very_bad(ctx, 'black')
-                // },
                 fill: true,    //false,
                 tension: 0.3,
                 segment: {

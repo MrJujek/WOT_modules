@@ -6,6 +6,6 @@ const all_equipment = 'https://api.worldoftanks.eu/wot/encyclopedia/provisions/?
 
 make_main()
 
-make_tanks_stats()
+//make_tanks_stats()
 
-console.log((await getapi(all_equipment))["data"])
+//console.log((await getapi(all_equipment))["data"])
