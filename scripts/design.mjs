@@ -73,8 +73,10 @@ export function make_main() {
                 $("#equipment").hide();
             });
 
-            $("#directive_slot").on("mousemove", function (e) {
-                console.log("x: " + e.clientX + ", y: " + e.clientY)
+            $("#slots_for_equipment").click(function () {
+                $("#slots_for_equipment").on("mousemove", function (e) {
+                    console.log("x: " + e.clientX + ", y: " + e.clientY)
+                })
             })
         });
 
@@ -87,8 +89,10 @@ export function make_main() {
 }
 
 export function make_tanks_stats() {
-    $("#slots_for_equipment").on("mousemove", function (e) {
-        console.log("x: " + e.clientX + ", y: " + e.clientY)
+    $("#slots_for_equipment").click(function () {
+        $("#slots_for_equipment").on("mousemove", function (e) {
+            console.log("x: " + e.clientX + ", y: " + e.clientY)
+        })
     })
     console.log(hel)
 }
