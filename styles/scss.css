@@ -111,14 +111,14 @@ footer {
   height: 80px;
 }
 
-#header_text {
+.header_text {
   color: #F9F4F8;
   font-size: 45px;
   font-family: Bungee, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-shadow: 5px 5px 1px #040403;
 }
 
-#header_text:hover {
+.header_text:hover {
   color: #efca08;
   cursor: pointer;
 }

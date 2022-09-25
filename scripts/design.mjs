@@ -21,7 +21,7 @@ export function make_main() {
 
         $("#main_site").show()
 
-        $("#header_text").click(function () {
+        $(".header_text").click(function () {
             $("#main_site").show()
 
             $("#player_site").hide()
@@ -36,7 +36,7 @@ export function make_main() {
 
 
         });
-        $("#header_text").click(function () {
+        $(".header_text").click(function () {
             console.log("klik")
         })
         $("#tanks_stats").click(function () {
