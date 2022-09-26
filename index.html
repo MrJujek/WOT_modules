@@ -16,17 +16,16 @@
 </head>
 
 <body>
+    <header>
+        <div id="logo">
+            <img src="./images/logo.png" alt="WOTCalc">
+        </div>
+        <div class="header_text">
+            <span>W</span>O<span>T</span> <span>C</span>alc
+        </div>
+    </header>
     <!-- Main site -->
     <div id="main_site">
-        <header>
-            <div id="logo">
-                <img src="" alt="">
-            </div>
-            <div class="header_text">
-                WOT Calc
-            </div>
-        </header>
-
         <nav>
             <div id="player_stats">
                 <span style="font-size: 40px;">P</span>layer <span style="font-size: 40px;">s</span>tatistics
@@ -40,27 +39,10 @@
                 <span style="font-size: 40px;">A</span>bout
             </div>
         </nav>
-
-        <footer>
-            <div id="footer_text">
-                <p>WOTCalc is a website created for <a href="http://www.worldoftanks.com">World of Tanks</a>.</p>
-                <p>It is not an official Wargaming or World of Tanks website.</p>
-                <p>World of Tanks is a trademark of <a href="http://www.wargaming.net">Wargaming.net</a></p>
-            </div>
-        </footer>
     </div>
 
     <!-- Tanks site -->
     <div id="tanks_site">
-        <header>
-            <div id="logo">
-                <img src="" alt="">
-            </div>
-            <div class="header_text">
-                <span>W</span>O<span>T</span> <span>C</span>alc
-            </div>
-        </header>
-
         <div id="equipment_and_consumables">
             <!-- Modules -->
             <div id="slots_for_equipment">
@@ -91,21 +73,9 @@
 
             <!-- Ammunition -->
             <div id="slots_for_ammunition">
-                <div id="ammunition_slot1"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                        <line x1="20" y1="50" x2="80" y2="50" />
-                        <line x1="50" y1="20" x2="50" y2="80" />
-                    </svg></div>
-                <div id="ammunition_slot2"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                        <line x1="20" y1="50" x2="80" y2="50" />
-                        <line x1="50" y1="20" x2="50" y2="80" />
-                    </svg></div>
-                <div id="ammunition_slot3"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='#605744'
-                        stroke='#605744' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'>
-                        <line x1="20" y1="50" x2="80" y2="50" />
-                        <line x1="50" y1="20" x2="50" y2="80" />
-                    </svg></div>
+                <div id="ammunition_slot1"></div>
+                <div id="ammunition_slot2"></div>
+                <div id="ammunition_slot3"></div>
             </div>
 
             <!-- Consumables -->
@@ -134,26 +104,24 @@
             </div>
         </div>
 
-
         <div id="equipment">
             <canvas id="WN8_chart" width="290px" height="185px"></canvas>
+
         </div>
     </div>
 
     <!-- Player site -->
     <div id="player_site">
-        <header>
-            <div id="logo">
-                <img src="" alt="">
-            </div>
-            <div class="header_text">
-                <span>W</span>O<span>T</span> <span>C</span>alc
-            </div>
-        </header>
 
     </div>
 
-
+    <footer>
+        <div id="footer_text">
+            <p>WOTCalc is a website created for <a href="http://www.worldoftanks.com">World of Tanks</a>.</p>
+            <p>It is not an official Wargaming or World of Tanks website.</p>
+            <p>World of Tanks is a trademark of <a href="http://www.wargaming.net">Wargaming.net</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>

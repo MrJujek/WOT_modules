@@ -26,7 +26,10 @@
 #directive_slot:hover,
 #consumable_slot1:hover,
 #consumable_slot2:hover,
-#consumable_slot3:hover {
+#consumable_slot3:hover,
+#ammunition_slot1:hover,
+#ammunition_slot2:hover,
+#ammunition_slot3:hover {
   background-color: rgb(72, 75, 74);
   cursor: pointer;
 }
@@ -60,13 +63,16 @@
 #ammunition_slot2,
 #ammunition_slot3 {
   height: 54px;
-  width: 20px;
-  background-color: rgb(72, 75, 74);
+  width: 42px;
+  background-color: rgb(32, 35, 34);
 }
 
 #equipment {
   width: 290px;
   height: 185px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #camouflage_slot,
@@ -77,10 +83,10 @@
 
 #main_site {
   height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   background-size: 100vw 100vh;
   background-image: url(../images/blurred_back.jpg);
-  overflow: y;
+  overflow: hidden;
 }
 
 header {
@@ -91,6 +97,12 @@ header {
   align-items: center;
   justify-content: center;
   box-shadow: 5px 5px 20px #040403;
+}
+
+#logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
 }
 
 footer {
@@ -109,6 +121,9 @@ footer {
   padding-right: 20px;
   width: 80px;
   height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_text {
@@ -125,7 +140,8 @@ footer {
 
 #footer_text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: #F9F4F8;
@@ -151,9 +167,9 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 10px;
   position: fixed;
-  bottom: 100px;
+  top: 100px;
 }
 
 #nav-line {

@@ -27,7 +27,10 @@
 #directive_slot:hover,
 #consumable_slot1:hover,
 #consumable_slot2:hover,
-#consumable_slot3:hover {
+#consumable_slot3:hover,
+#ammunition_slot1:hover,
+#ammunition_slot2:hover,
+#ammunition_slot3:hover {
     background-color: rgb(72, 75, 74);
     cursor: pointer;
 }
@@ -61,14 +64,17 @@
 #ammunition_slot2,
 #ammunition_slot3 {
     height: 54px;
-    width: 20px;
-    background-color: rgb(72, 75, 74);
+    width: calc(126px/3);
+    background-color: rgb(32, 35, 34);
 }
 
 
 #equipment {
     width: 290px;
     height: 185px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #camouflage_slot,

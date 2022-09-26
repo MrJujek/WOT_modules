@@ -10,8 +10,16 @@ let chart = "WN8_chart"
 const all_tanks = 'https://api.worldoftanks.eu/wot/encyclopedia/vehicles/?application_id=98e129430b80fda39a161c7a200261cf&limit=10'
 const all_equipment = 'https://api.worldoftanks.eu/wot/encyclopedia/provisions/?application_id=98e129430b80fda39a161c7a200261cf'
 
+let api_data = (await getapi(all_equipment))["data"]
+console.log(api_data)
 
-let hel = (await getapi(all_equipment))["data"]
+for (let i = 0; i < Object.keys(api_data).length; i++) {
+    if (Object.values(api_data)[i]["type"] == "optionalDevice") {
+        console.log(i)
+        console.log(Object.values(api_data)[i]['name'])
+        console.log(Object.values(api_data)[i]['image'])
+    }
+}
 
 export function make_main() {
     $(document).ready(function () {
@@ -51,47 +59,41 @@ export function make_main() {
                 .css("background", "white")
                 .hide()
 
-            $("#equipment_slot1").click(function () {
-                $("#equipment").show();
-                drawWN8Chart(wn8, data, chart)
-                make_tanks_stats()
-            });
-            $("#equipment_slot2").click(function () {
-                $("#equipment").show();
-                drawWN8Chart(wn8, data, chart)
-            });
-            $("#equipment_slot3").click(function () {
-                $("#equipment").show();
-                drawWN8Chart(wn8, data, chart)
-            });
+            for (let i = 1; i <= 3; i++) {
+                $("#equipment_slot" + i).click(function () {
+                    $("#equipment").show();
+                    drawWN8Chart(wn8, data, chart)
+                    make_tanks_stats()
+                });
+                $("#consumable_slot" + i).click(function () {
+                    $("#equipment").show();
+                    drawWN8Chart(wn8, data, chart)
+                    make_tanks_stats()
+                });
+                $("#ammunition_slot" + i).click(function () {
+                    $("#equipment").show();
+                    drawWN8Chart(wn8, data, chart)
+                    make_tanks_stats()
+                });
+            }
             $("#directive_slot").click(function () {
                 $("#equipment").show();
                 drawWN8Chart(wn8, data, chart)
             });
-
             $("#equipment").click(function () {
                 $("#equipment").hide();
             });
-
-            $("#slots_for_equipment").click(function () {
-                $("#slots_for_equipment").on("mousemove", function (e) {
-                    console.log("x: " + e.clientX + ", y: " + e.clientY)
-                })
-            })
         });
-
-
     })
-
-    //$("body").empty()
-
-
 }
 
 export function make_tanks_stats() {
-    $("#slots_for_equipment").click(function () {
+    $("#slots_for_equipment").on("mousedown", function () {
         $("#slots_for_equipment").on("mousemove", function (e) {
             console.log("x: " + e.clientX + ", y: " + e.clientY)
+        })
+        $("#slots_for_equipment").on("mouseup", function () {
+            $("#slots_for_equipment").off("mousemove")
         })
     })
     console.log(hel)
