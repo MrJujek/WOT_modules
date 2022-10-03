@@ -82,7 +82,7 @@
 }
 
 #main_site {
-  height: 100vh;
+  height: calc(100vh - 200px);
   min-width: 100vw;
   background-size: 100vw 100vh;
   background-image: url(../images/blurred_back.jpg);
@@ -113,8 +113,6 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 5px -5px 20px #040403;
-  position: fixed;
-  bottom: 0px;
 }
 
 #logo {

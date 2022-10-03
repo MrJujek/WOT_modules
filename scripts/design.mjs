@@ -12,14 +12,34 @@ const all_equipment = 'https://api.worldoftanks.eu/wot/encyclopedia/provisions/?
 
 let api_data = (await getapi(all_equipment))["data"]
 console.log(api_data)
+console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
+let equipment_name = []
+let images = {}
 for (let i = 0; i < Object.keys(api_data).length; i++) {
-    if (Object.values(api_data)[i]["type"] == "optionalDevice") {
-        console.log(i)
-        console.log(Object.values(api_data)[i]['name'])
-        console.log(Object.values(api_data)[i]['image'])
+    if (Object.values(api_data)[i]["type"] == "optionalDevice" && !Object.values(api_data)[i]["type"].endsWith("2") && !Object.values(api_data)[i]["type"].endsWith("3")) {
+
+        if (Object.values(api_data)[i]['image'].endsWith(".png.png")) {
+            images[Object.values(api_data)[i]['name']] = Object.values(api_data)[i]['image'].substr(0, Object.values(api_data)[i]['image'].length - 4)
+        } else {
+            images[Object.values(api_data)[i]['name']] = Object.values(api_data)[i]['image']
+        }
+
+        equipment_name.push(Object.values(api_data)[i]['name'] + "")
     }
 }
+
+//console.log(equipment_name)
+console.log(images)
+
+for (let i = 0; i < equipment_name.length; i++) {
+    if (!equipment_name[i].endsWith('1') && !equipment_name[i].endsWith('2') && !equipment_name[i].startsWith('Bounty') && !equipment_name[i].startsWith('Enchanced')) {
+        console.log(equipment_name[i])
+        document.getElementById("equipment").innerHTML += "<img src=" + images[equipment_name[i]] + "></img>"
+    }
+
+}
+
 
 export function make_main() {
     $(document).ready(function () {
@@ -41,12 +61,8 @@ export function make_main() {
             $("#main_site").hide()
 
             $("#player_site").show()
-
-
         });
-        $(".header_text").click(function () {
-            console.log("klik")
-        })
+
         $("#tanks_stats").click(function () {
             $("#main_site").hide()
 
@@ -62,23 +78,19 @@ export function make_main() {
             for (let i = 1; i <= 3; i++) {
                 $("#equipment_slot" + i).click(function () {
                     $("#equipment").show();
-                    drawWN8Chart(wn8, data, chart)
                     make_tanks_stats()
                 });
                 $("#consumable_slot" + i).click(function () {
                     $("#equipment").show();
-                    drawWN8Chart(wn8, data, chart)
                     make_tanks_stats()
                 });
                 $("#ammunition_slot" + i).click(function () {
                     $("#equipment").show();
-                    drawWN8Chart(wn8, data, chart)
                     make_tanks_stats()
                 });
             }
             $("#directive_slot").click(function () {
                 $("#equipment").show();
-                drawWN8Chart(wn8, data, chart)
             });
             $("#equipment").click(function () {
                 $("#equipment").hide();
@@ -96,5 +108,4 @@ export function make_tanks_stats() {
             $("#slots_for_equipment").off("mousemove")
         })
     })
-    console.log(hel)
 }
